@@ -58,29 +58,35 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cp9-Me-BgU">
                                             <rect key="frame" x="20" y="11" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM9-5N-aMG">
                                             <rect key="frame" x="331" y="22" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydg-qT-p2E">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydg-qT-p2E">
                                             <rect key="frame" x="20" y="40" width="42" height="14.333333333333336"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="14.333333333333336" id="9PU-W6-jzH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" systemColor="systemGray2Color"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Cp9-Me-BgU" firstAttribute="trailing" secondItem="ydg-qT-p2E" secondAttribute="trailing" id="1dy-F9-CUE"/>
                                         <constraint firstItem="UM9-5N-aMG" firstAttribute="trailing" secondItem="rQE-9c-KX8" secondAttribute="trailingMargin" id="34R-U8-Ld4"/>
-                                        <constraint firstItem="ydg-qT-p2E" firstAttribute="top" secondItem="Cp9-Me-BgU" secondAttribute="bottom" constant="8" symbolic="YES" id="BLx-UR-gC3"/>
+                                        <constraint firstItem="ydg-qT-p2E" firstAttribute="top" secondItem="Cp9-Me-BgU" secondAttribute="bottom" constant="8" symbolic="YES" id="9kt-hu-2oA"/>
                                         <constraint firstItem="UM9-5N-aMG" firstAttribute="top" secondItem="rQE-9c-KX8" secondAttribute="topMargin" constant="11" id="IVj-em-rjF"/>
                                         <constraint firstItem="Cp9-Me-BgU" firstAttribute="top" secondItem="rQE-9c-KX8" secondAttribute="topMargin" id="ItZ-gJ-yQw"/>
+                                        <constraint firstAttribute="bottom" secondItem="ydg-qT-p2E" secondAttribute="bottom" constant="10.67" id="Ueq-gQ-yVj"/>
                                         <constraint firstItem="Cp9-Me-BgU" firstAttribute="leading" secondItem="rQE-9c-KX8" secondAttribute="leadingMargin" id="kaG-Ud-vQK"/>
+                                        <constraint firstItem="Cp9-Me-BgU" firstAttribute="leading" secondItem="ydg-qT-p2E" secondAttribute="leading" id="uLY-ma-Ed4"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
