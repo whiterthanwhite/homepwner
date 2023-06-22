@@ -10,17 +10,15 @@ import UIKit
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     
+    required override init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let window = self.refreshControl?.window
-        let statusBarMgr = window?.windowScene?.statusBarManager
-        
-        let statusBarHeight = statusBarMgr?.statusBarFrame.height ?? 0.0
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
     }
@@ -85,21 +83,11 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         let newItem = itemStore.createItem()
         if let index = itemStore.allItems.firstIndex(of: newItem) {
             let indexPath = IndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-    }
-    
-    @IBAction func toggledEditingMode(_ sender: UIButton) {
-        if isEditing {
-            sender.setTitle("Edit", for: .normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Done", for: .normal)
-            setEditing(true, animated: true)
         }
     }
 }
