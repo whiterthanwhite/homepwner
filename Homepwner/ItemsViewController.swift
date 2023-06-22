@@ -10,7 +10,7 @@ import UIKit
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     
-    required override init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         navigationItem.leftBarButtonItem = editButtonItem
